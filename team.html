@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kelompok - KejarDedlen</title>
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dash-page">
+ 
+  <!-- Kumpulan icon (dipanggil pakai <use>) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+    <symbol id="i-task" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 3-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 010 6.8M18 14.4c2.2.7 3.5 2.6 3.5 5.6"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M14 4h5a1 1 0 011 1v14a1 1 0 01-1 1h-5"/><path d="M4 12h11M11 8l4 4-4 4"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  </svg>
+ 
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="dash-sidebar">
+    <a href="landing-page.html" class="brand">
+      <span class="brand-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b4f86"
+             stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="5 13 10 18 19 7"/>
+        </svg>
+        <i class="brand-dot"></i>
+      </span>
+      <span class="brand-name">KejarDedlen</span>
+    </a>
+ 
+    <nav class="dash-nav">
+      <a href="main-dashboard.html"><svg class="ic"><use href="#i-home"/></svg><span class="nav-text">Dashboard</span></a>
+      <a href="my-tasks.html"><svg class="ic"><use href="#i-task"/></svg><span class="nav-text">Tugas Saya</span><span class="nav-badge">1</span></a>
+      <a href="team.html" class="active"><svg class="ic"><use href="#i-users"/></svg><span class="nav-text">Kelompok</span></a>
+      <a href="profil.html"><svg class="ic"><use href="#i-user"/></svg><span class="nav-text">Profil</span></a>
+    </nav>
+ 
+    <div class="dash-logout">
+      <a href="landing-page.html"><svg class="ic"><use href="#i-logout"/></svg><span class="nav-text">Keluar</span></a>
+    </div>
+  </aside>
+ 
+  <!-- ===== KONTEN UTAMA ===== -->
+  <div class="dash-main">
+ 
+    <header class="dash-topbar">
+      <h1>Kelompok</h1>
+      <a href="profil.html" class="user-pill">
+        <span class="user-avatar">NM</span>
+        Naura Mantep
+      </a>
+    </header>
+ 
+    <main class="dash-content">
+ 
+      <!-- Judul halaman + tombol buat kelompok -->
+      <div class="gp-head">
+        <div>
+          <h2 class="gp-title">Kelompokmu</h2>
+          <p class="gp-sub">Kerjakan tujuan besar bersama teman.</p>
+        </div>
+        <a href="create-group.html" class="gp-create">
+          <svg class="ic"><use href="#i-plus"/></svg>
+          Buat Kelompok
+        </a>
+      </div>
+ 
+      <!-- Daftar kelompok (kartu bisa diklik -> detail kelompok) -->
+      <section class="gp-grid">
+ 
+        <a href="team-task.html" class="gp-card">
+          <div class="gp-card-top">
+            <span class="gp-icon"><svg class="ic"><use href="#i-users"/></svg></span>
+            <svg class="ic gp-arrow"><use href="#i-chevron"/></svg>
+          </div>
+          <h3>Kelompok Skripsi</h3>
+          <p>Ruang kerja penelitian bersama.</p>
+          <div class="gp-card-foot">
+            <span>4 anggota</span>
+            <span>1/4 tugas selesai</span>
+          </div>
+        </a>
+ 
+      </section>
+ 
+      <!-- Undangan masuk -->
+      <section class="gp-invites">
+        <h3 class="gp-invites-title">Undangan masuk</h3>
+ 
+        <div class="gp-invite">
+          <div class="gp-invite-info">
+            <span class="gp-invite-avatar" aria-hidden="true">D</span>
+            <div>
+              <strong>Tugas Membuat Webiste</strong>
+              <small>Diundang oleh Dimas</small>
+            </div>
+          </div>
+ 
+          <div class="gp-invite-actions">
+            <button type="button" class="gp-btn gp-btn-outline">Tolak</button>
+            <a href="accept-invite.html" class="gp-btn gp-btn-solid">Terima</a>
+          </div>
+        </div>
+ 
+      </section>
+ 
+    </main>
+  </div>
+ 
+</body>
+</html>
+ 

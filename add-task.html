@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tambah Tugas - KejarDedlen</title>
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dash-page">
+ 
+  <!-- Kumpulan icon (dipanggil pakai <use>) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+    <symbol id="i-task" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 3-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 010 6.8M18 14.4c2.2.7 3.5 2.6 3.5 5.6"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M14 4h5a1 1 0 011 1v14a1 1 0 01-1 1h-5"/><path d="M4 12h11M11 8l4 4-4 4"/></symbol>
+  </svg>
+ 
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="dash-sidebar">
+    <a href="landing-page.html" class="brand">
+      <span class="brand-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b4f86"
+             stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="5 13 10 18 19 7"/>
+        </svg>
+        <i class="brand-dot"></i>
+      </span>
+      <span class="brand-name">KejarDedlen</span>
+    </a>
+ 
+    <nav class="dash-nav">
+      <a href="main-dashboard.html"><svg class="ic"><use href="#i-home"/></svg><span class="nav-text">Dashboard</span></a>
+      <a href="my-tasks.html"><svg class="ic"><use href="#i-task"/></svg><span class="nav-text">Tugas Saya</span></a>
+      <a href="team.html"><svg class="ic"><use href="#i-users"/></svg><span class="nav-text">Kelompok</span></a>
+      <a href="profil.html"><svg class="ic"><use href="#i-user"/></svg><span class="nav-text">Profil</span></a>
+    </nav>
+ 
+    <div class="dash-logout">
+      <a href="landing-page.html"><svg class="ic"><use href="#i-logout"/></svg><span class="nav-text">Keluar</span></a>
+    </div>
+  </aside>
+ 
+  <!-- ===== KONTEN UTAMA ===== -->
+  <div class="dash-main">
+ 
+    <header class="dash-topbar">
+      <h1>Tambah Tugas</h1>
+      <a href="profil.html" class="user-pill">
+        <span class="user-avatar">NM</span>
+        Naura Mantep
+      </a>
+    </header>
+ 
+    <main class="dash-content">
+ 
+      <form class="at-card" action="#" method="post">
+ 
+        <h2 class="at-title">Tambah tugas</h2>
+        <p class="at-sub">Isi detail tugas dan pecah menjadi langkah kecil.</p>
+ 
+        <!-- Judul -->
+        <div class="at-field">
+          <label for="judul">Judul</label>
+          <input type="text" id="judul" name="judul" placeholder="Contoh: Kumpul laporan PKL" required>
+        </div>
+ 
+        <!-- Deskripsi -->
+        <div class="at-field">
+          <label for="deskripsi">Deskripsi</label>
+          <textarea id="deskripsi" name="deskripsi" placeholder="Tambahkan catatan tugas..."></textarea>
+        </div>
+ 
+        <!-- Prioritas (radio, tampil seperti tombol pil) -->
+        <div class="at-field">
+          <span class="at-label">Prioritas</span>
+          <div class="at-prio">
+            <input type="radio" id="prio-tinggi" name="prioritas" value="tinggi">
+            <label for="prio-tinggi">Tinggi</label>
+ 
+            <input type="radio" id="prio-sedang" name="prioritas" value="sedang" checked>
+            <label for="prio-sedang">Sedang</label>
+ 
+            <input type="radio" id="prio-rendah" name="prioritas" value="rendah">
+            <label for="prio-rendah">Rendah</label>
+          </div>
+        </div>
+ 
+        <!-- Deadline + Status -->
+        <div class="at-row">
+          <div class="at-field">
+            <label for="deadline">Deadline</label>
+            <input type="date" id="deadline" name="deadline">
+          </div>
+ 
+          <div class="at-field">
+            <label for="status">Status</label>
+            <select id="status" name="status">
+              <option value="belum" selected>Belum</option>
+              <option value="proses">Proses</option>
+              <option value="selesai">Selesai</option>
+            </select>
+          </div>
+        </div>
+ 
+        <!-- Sub-task -->
+        <div class="at-subtask">
+          <div class="at-subtask-head">
+            <h3>Sub-task</h3>
+            <span class="at-count">0 langkah</span>
+          </div>
+ 
+          <div class="at-subtask-add">
+            <input type="text" id="subtask-input" placeholder="Tambah sub-task..." aria-label="Tambah sub-task">
+            <button type="button" class="at-btn-outline">Tambah</button>
+          </div>
+ 
+          <!-- Daftar sub-task yang sudah ditambahkan akan muncul di sini.
+               Contoh satu item:
+               <li class="at-subtask-item"><span>Tulis latar belakang</span><button type="button" aria-label="Hapus">&times;</button></li> -->
+          <ul class="at-subtask-list" id="subtask-list"></ul>
+        </div>
+ 
+        <!-- Tombol aksi -->
+        <div class="at-actions">
+          <a href="my-tasks.html" class="at-btn-outline">Batal</a>
+          <button type="submit" class="at-btn-solid">Simpan</button>
+        </div>
+ 
+      </form>
+ 
+    </main>
+  </div>
+ 
+</body>
+</html>

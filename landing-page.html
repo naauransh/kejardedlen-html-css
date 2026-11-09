@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KejarDedlen - Selesaikan tugas tepat waktu</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="hero">
+    <nav class="navbar container">
+      <a class="brand brand-light" href="#">
+        <span class="brand-icon">✓</span>
+        <span>KejarDedlen</span>
+      </a>
+      <button class="menu-toggle" aria-label="Buka menu">☰</button>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#rating">Rating</a>
+      </div>
+      <a class="button button-white nav-login" href="login.html">Login</a>
+    </nav>
+
+    <section class="hero-content container" id="home">
+      <div class="hero-copy">
+        <h1>Selesai <span>duluan</span><br>sebelum deadline<br>datang.</h1>
+        <p>To do list pribadi dan kelompok. Atur prioritas, pantau deadline, dan lihat progresmu.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="register.html">Daftar gratis</a>
+          <a class="button button-outline" href="login.html">Masuk</a>
+        </div>
+      </div>
+      <div class="task-preview" aria-label="Contoh daftar tugas">
+        <div class="bubble bubble-one"></div>
+        <div class="bubble bubble-two"></div>
+        <article class="task-card task-tilt-one">
+          <span>Kumpul laporan PKL</span><b class="status status-danger">△ Terlambat 2 hari</b>
+        </article>
+        <article class="task-card task-tilt-two">
+          <span>Revisi proposal skripsi</span><b class="status status-warning">◉ Besok</b>
+        </article>
+        <article class="task-card task-tilt-three">
+          <span>Belajar Eloquent</span><b class="status status-muted">◷ 12 hari lagi</b>
+        </article>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="steps-section">
+      <div class="container">
+        <h2>Cukup 3 langkah</h2>
+        <div class="steps-grid">
+          <article class="step">
+            <span class="step-number">1</span>
+            <h3>Catat tugasmu</h3>
+            <p>Tulis semua yang perlu kamu selesaikan.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">2</span>
+            <h3>Atur prioritas dan deadline</h3>
+            <p>Tentukan mana yang harus dikejar duluan.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">3</span>
+            <h3>Selesaikan duluan</h3>
+            <p>Pantau progres sampai semua tugas tuntas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-section" id="features">
+      <div class="container">
+        <h2>Semua yang kamu butuhkan</h2>
+        <div class="features-grid">
+          <article class="feature-card"><span class="feature-icon">△</span>
+            <h3>Peringatan deadline</h3>
+            <p>Lihat tugas terlambat dan yang segera jatuh tempo.</p>
+          </article>
+          <article class="feature-card"><span class="feature-icon">♧</span>
+            <h3>Kerja bareng kelompok</h3>
+            <p>Berbagi tugas dan progres bersama teman.</p>
+          </article>
+          <article class="feature-card"><span class="feature-icon">▥</span>
+            <h3>Grafik progres</h3>
+            <p>Pantau pencapaianmu dalam grafik yang jelas.</p>
+          </article>
+          <article class="feature-card"><span class="feature-icon">⌕</span>
+            <h3>Cari dan filter cepat</h3>
+            <p>Temukan tugas berdasarkan status dan prioritas.</p>
+          </article>
+          <article class="feature-card"><span class="feature-icon">▣</span>
+            <h3>Sub-task</h3>
+            <p>Pecah pekerjaan besar menjadi langkah kecil.</p>
+          </article>
+          <article class="feature-card"><span class="feature-icon">✓</span>
+            <h3>Reset password aman</h3>
+            <p>Pulihkan akun melalui link sekali pakai.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section container" id="about">
+      <div class="about-copy">
+        <span class="eyebrow">TENTANG KEJARDEDLEN</span>
+        <h2>Satu tempat untuk mengejar semua targetmu.</h2>
+        <p>KejarDedlen membantu kamu mengatur tugas pribadi dan kelompok, memahami prioritas, dan tetap selangkah di
+          depan deadline.</p>
+      </div>
+      <div class="stats-card">
+        <div><strong>24</strong><span>tugas</span></div>
+        <div><strong>3</strong><span>kelompok</span></div>
+        <div><strong>92%</strong><span>selesai</span></div>
+      </div>
+    </section>
+
+    <section class="reviews-section container" id="rating">
+      <h2>Kata mereka tentang KejarDedlen</h2>
+      <div class="rating-overview">
+        <div class="rating-score"><strong>4,7</strong><span class="stars">★★★★★</span><small>dari 38 pengguna</small>
+        </div>
+        <div class="rating-bars">
+          <div><b>5 ⭐</b><span class="bar"><i style="width:58%"></i></span><small>24</small></div>
+          <div><b>4 ⭐</b><span class="bar"><i style="width:28%"></i></span><small>11</small></div>
+          <div><b>3 ⭐</b><span class="bar"><i style="width:5%"></i></span><small>2</small></div>
+          <div><b>2 ⭐</b><span class="bar"><i style="width:3%"></i></span><small>1</small></div>
+          <div><b>1 ⭐</b><span class="bar"><i style="width:0%"></i></span><small>0</small></div>
+        </div>
+      </div>
+
+      <div class="review-grid" id="reviewGrid">
+        <article class="review-card"><span class="stars">★★★★★</span>
+          <p>Warna peringatan deadline-nya bikin aku nggak pernah telat lagi.</p>
+          <div class="review-user"><b>B</b><span><strong>Budi</strong><small>2 hari lalu</small></span></div>
+        </article>
+        <article class="review-card"><span class="stars">★★★★★</span>
+          <p>Fitur kelompok enak banget, kelihatan siapa yang ngerjain sub-task.</p>
+          <div class="review-user"><b>S</b><span><strong>Sari</strong><small>3 hari lalu</small></span></div>
+        </article>
+        <article class="review-card"><span class="stars">★★★★★</span>
+          <p>Simpel dan gampang dipakai, tampilannya juga enak dilihat.</p>
+          <div class="review-user"><b>R</b><span><strong>Rani</strong><small>5 hari lalu</small></span></div>
+        </article>
+        <article class="review-card"><span class="stars">★★★★★</span>
+          <p>Grafik progresnya bikin semangat nyelesain tugas.</p>
+          <div class="review-user"><b>D</b><span><strong>Dika</strong><small>1 minggu lalu</small></span></div>
+        </article>
+        <article class="review-card"><span class="stars">★★★★★</span>
+          <p>Pencarian dan filternya cepat, tugas banyak jadi gampang dicari.</p>
+          <div class="review-user"><b>M</b><span><strong>Maya</strong><small>1 minggu lalu</small></span></div>
+        </article>
+        <article class="review-card"><span class="stars">★★★★★</span>
+          <p>Cocok buat tugas kelompok kuliah, undang teman tinggal pakai email.</p>
+          <div class="review-user"><b>F</b><span><strong>Fajar</strong><small>2 minggu lalu</small></span></div>
+        </article>
+      </div>
+      <button class="button button-white review-button" id="showReviews">
+        Lihat semua ulasan
+      </button>
+    </section>
+
+    <section class="cta-section container" id="register">
+      <h2>Siap mengejar deadline-mu?</h2>
+      <a class="button button-white" href="register.html">Daftar gratis</a>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <a class="brand" href="#"><span class="brand-icon">✓</span><span>KejarDedlen</span></a>
+    <div class="footer-links"><a href="#home">Home</a><a href="#about">About</a><a href="#features">Features</a><a
+        href="#rating">Rating</a></div>
+  </footer>
+
+  <!-- Tombol icon chat -->
+  <button id="chat-toggle" class="chat-toggle" aria-label="Buka chat AI">
+    <svg id="icon-open" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+    </svg>
+  </button>
+
+  <!-- Jendela chat (awalnya tersembunyi) -->
+  <div id="chat-box" class="chat-box">
+    <div class="chat-header">
+      <span>Tanya KejarDedlen AI</span>
+      <button id="chat-close" aria-label="Tutup chat">✕</button>
+    </div>
+    <div class="chat-messages">
+      <div class="msg bot">Halo! Ada yang ingin kamu tanyakan?</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" placeholder="Tulis pesan..." />
+      <button>➤</button>
+    </div>
+  </div>
+
+  <script>
+    const button = document.getElementById('showReviews');
+
+    button.addEventListener('click', function () {
+      document.getElementById('reviewGrid').classList.toggle('show-all');
+
+      if (button.textContent === 'Lihat semua ulasan') {
+        button.textContent = 'Tampilkan lebih sedikit';
+      } else {
+        button.textContent = 'Lihat semua ulasan';
+      }
+    });
+
+    const toggle = document.getElementById('chat-toggle');
+    const chatBox = document.getElementById('chat-box');
+    const closeBtn = document.getElementById('chat-close');
+
+    toggle.addEventListener('click', () => chatBox.classList.toggle('open'));
+    closeBtn.addEventListener('click', () => chatBox.classList.remove('open'));
+
+    const input = document.getElementById('chat-text');
+    const sendBtn = document.getElementById('chat-send');
+    const messages = document.querySelector('.chat-messages');
+
+    function addMessage(text, who) {
+      const div = document.createElement('div');
+      div.className = `msg ${who}`;
+      div.textContent = text;
+      messages.appendChild(div);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function sendMessage() {
+      const text = input.value.trim();
+      if (!text) return;
+      addMessage(text, 'user');
+      input.value = '';
+      // nanti ganti bagian ini dengan panggilan ke API AI kamu
+      setTimeout(() => addMessage('Oke, aku bantu cek ya!', 'bot'), 600);
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') sendMessage();
+    });
+  </script>
+</body>
+
+</html>

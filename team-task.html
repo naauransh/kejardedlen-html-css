@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Kelompok - KejarDedlen</title>
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dash-page">
+ 
+  <!-- Kumpulan icon (dipanggil pakai <use>) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+    <symbol id="i-task" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 3-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 010 6.8M18 14.4c2.2.7 3.5 2.6 3.5 5.6"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M14 4h5a1 1 0 011 1v14a1 1 0 01-1 1h-5"/><path d="M4 12h11M11 8l4 4-4 4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 13l4 4 10-10"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5l9.5 16.5h-19L12 3.5z"/><path d="M12 10v4.5M12 17.5v.01"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4z"/><path d="M13.5 6.5l4 4"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></symbol>
+  </svg>
+ 
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="dash-sidebar">
+    <a href="landing-page.html" class="brand">
+      <span class="brand-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b4f86"
+             stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="5 13 10 18 19 7"/>
+        </svg>
+        <i class="brand-dot"></i>
+      </span>
+      <span class="brand-name">KejarDedlen</span>
+    </a>
+ 
+    <nav class="dash-nav">
+      <a href="main-dashboard.html"><svg class="ic"><use href="#i-home"/></svg><span class="nav-text">Dashboard</span></a>
+      <a href="my-tasks.html"><svg class="ic"><use href="#i-task"/></svg><span class="nav-text">Tugas Saya</span><span class="nav-badge">1</span></a>
+      <a href="team.html" class="active"><svg class="ic"><use href="#i-users"/></svg><span class="nav-text">Kelompok</span></a>
+      <a href="profil.html"><svg class="ic"><use href="#i-user"/></svg><span class="nav-text">Profil</span></a>
+    </nav>
+ 
+    <div class="dash-logout">
+      <a href="landing-page.html"><svg class="ic"><use href="#i-logout"/></svg><span class="nav-text">Keluar</span></a>
+    </div>
+  </aside>
+ 
+  <!-- ===== KONTEN UTAMA ===== -->
+  <div class="dash-main">
+ 
+    <header class="dash-topbar">
+      <h1>Dashboard Kelompok</h1>
+      <a href="profil.html" class="user-pill">
+        <span class="user-avatar">NM</span>
+        Naura Mantep
+      </a>
+    </header>
+ 
+    <main class="dash-content gd-page">
+ 
+      <!-- Kepala kelompok -->
+      <section class="gd-header">
+        <div class="gd-header-main">
+          <span class="gd-icon"><svg class="ic"><use href="#i-users"/></svg></span>
+          <div>
+            <p class="gd-eyebrow">Ruang kolaborasi</p>
+            <h2 class="gd-name">Kelompok Skripsi</h2>
+            <div class="gd-members" aria-label="Anggota kelompok">
+              <span class="gd-member">NM</span>
+              <span class="gd-member">B</span>
+              <span class="gd-member">S</span>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="gd-actions">
+          <button type="button" class="gd-btn gd-btn-outline" data-open-invite>Undang anggota</button>
+          <a href="manage-members.html" class="gd-btn gd-btn-solid">Kelola anggota</a>
+        </div>
+      </section>
+ 
+      <!-- Kartu angka -->
+      <section class="stat-grid gd-stats">
+        <div class="stat-box">
+          <span class="stat-icon"><svg class="ic"><use href="#i-task"/></svg></span>
+          <div><strong>4</strong><small>Tugas kelompok</small></div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-icon"><svg class="ic"><use href="#i-check"/></svg></span>
+          <div><strong>1</strong><small>Selesai</small></div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-icon"><svg class="ic"><use href="#i-alert"/></svg></span>
+          <div><strong>0</strong><small>Terlambat</small></div>
+        </div>
+      </section>
+ 
+      <!-- Banner deadline -->
+      <div class="dash-alert tk-alert gd-alert">
+        <svg class="ic"><use href="#i-clock"/></svg>
+        2 tugas mendekati deadline
+        <a href="#" class="tk-alert-btn">Lihat</a>
+      </div>
+ 
+      <!-- Filter cepat -->
+      <div class="tk-filter">
+        <a href="#" class="tk-chip">Mendekati (2)</a>
+      </div>
+ 
+      <!-- Pencarian + filter + Tambah Tugas -->
+      <div class="tk-toolbar gd-toolbar">
+        <label class="tk-search">
+          <svg class="ic"><use href="#i-search"/></svg>
+          <input type="text" placeholder="Cari judul tugas..." aria-label="Cari judul tugas">
+        </label>
+ 
+        <select class="tk-select" aria-label="Filter status">
+          <option>Semua</option>
+          <option>Belum</option>
+          <option>Proses</option>
+          <option>Selesai</option>
+        </select>
+ 
+        <select class="tk-select" aria-label="Filter prioritas">
+          <option>Semua</option>
+          <option>Tinggi</option>
+          <option>Sedang</option>
+          <option>Rendah</option>
+        </select>
+ 
+        <a href="add-task.html" class="tk-add">
+          <svg class="ic"><use href="#i-plus"/></svg>
+          Tambah Tugas
+        </a>
+      </div>
+ 
+      <!-- Daftar tugas kelompok (2 kolom) -->
+      <section class="tk-grid">
+ 
+        <!-- Kartu 1 -->
+        <article class="tk-card tk-urgent">
+          <div class="tk-head">
+            <span class="tk-prio tk-prio-high">Tinggi</span>
+          </div>
+          <h3 class="tk-title"><a href="task-detail.html" class="tk-link">Olah data survei</a></h3>
+          <p class="tk-desc">Bersihkan dan olah data responden.</p>
+          <div class="tk-meta">
+            <span class="tk-badge tk-badge-warn"><svg class="ic"><use href="#i-clock"/></svg>Hari ini!</span>
+            <span class="tk-date">3 Nov 2026</span>
+          </div>
+          <div class="tk-sub"><span>Sub-task 1/6</span><b>17%</b></div>
+          <div class="tk-progress"><i style="--p:17%"></i></div>
+          <div class="gd-owner"><span class="gd-owner-avatar">NM</span>Dibuat oleh Naura</div>
+          <div class="tk-seg">
+            <button type="button" class="active">Belum</button>
+            <button type="button">Proses</button>
+            <button type="button">Selesai</button>
+          </div>
+          <div class="tk-actions">
+            <a href="edit-task.html" class="tk-act tk-act-edit"><svg class="ic"><use href="#i-edit"/></svg>Edit</a>
+            <button type="button" class="tk-act tk-act-del" data-open-delete><svg class="ic"><use href="#i-trash"/></svg>Hapus</button>
+          </div>
+        </article>
+ 
+        <!-- Kartu 2 -->
+        <article class="tk-card tk-urgent">
+          <div class="tk-head">
+            <span class="tk-prio tk-prio-high">Tinggi</span>
+          </div>
+          <h3 class="tk-title"><a href="task-detail.html" class="tk-link">Bab 3 Metodologi</a></h3>
+          <p class="tk-desc">Susun metode, populasi, dan instrumen penelitian.</p>
+          <div class="tk-meta">
+            <span class="tk-badge tk-badge-warn"><svg class="ic"><use href="#i-clock"/></svg>2 hari lagi</span>
+            <span class="tk-date">5 Nov 2026</span>
+          </div>
+          <div class="tk-sub"><span>Sub-task 3/8</span><b>38%</b></div>
+          <div class="tk-progress"><i style="--p:38%"></i></div>
+          <div class="gd-owner"><span class="gd-owner-avatar">NM</span>Dibuat oleh Naura</div>
+          <div class="tk-seg">
+            <button type="button">Belum</button>
+            <button type="button" class="active">Proses</button>
+            <button type="button">Selesai</button>
+          </div>
+          <div class="tk-actions">
+            <a href="edit-task.html" class="tk-act tk-act-edit"><svg class="ic"><use href="#i-edit"/></svg>Edit</a>
+            <button type="button" class="tk-act tk-act-del" data-open-delete><svg class="ic"><use href="#i-trash"/></svg>Hapus</button>
+          </div>
+        </article>
+ 
+        <!-- Kartu 3 -->
+        <article class="tk-card">
+          <div class="tk-head">
+            <span class="tk-prio tk-prio-mid">Sedang</span>
+          </div>
+          <h3 class="tk-title"><a href="task-detail.html" class="tk-link">Susun kuesioner</a></h3>
+          <p class="tk-desc">Rapikan pertanyaan dan skala pengukuran.</p>
+          <div class="tk-meta">
+            <span class="tk-badge"><svg class="ic"><use href="#i-clock"/></svg>6 hari lagi</span>
+            <span class="tk-date">9 Nov 2026</span>
+          </div>
+          <div class="tk-sub"><span>Sub-task 0/4</span><b>0%</b></div>
+          <div class="tk-progress"><i style="--p:0%"></i></div>
+          <div class="gd-owner"><span class="gd-owner-avatar">NM</span>Dibuat oleh Naura</div>
+          <div class="tk-seg">
+            <button type="button" class="active">Belum</button>
+            <button type="button">Proses</button>
+            <button type="button">Selesai</button>
+          </div>
+          <div class="tk-actions">
+            <a href="edit-task.html" class="tk-act tk-act-edit"><svg class="ic"><use href="#i-edit"/></svg>Edit</a>
+            <button type="button" class="tk-act tk-act-del" data-open-delete><svg class="ic"><use href="#i-trash"/></svg>Hapus</button>
+          </div>
+        </article>
+ 
+        <!-- Kartu 4: selesai -->
+        <article class="tk-card tk-done">
+          <div class="tk-head">
+            <span class="tk-prio tk-prio-low">Rendah</span>
+          </div>
+          <h3 class="tk-title"><a href="task-detail.html" class="tk-link">Cari referensi jurnal</a></h3>
+          <p class="tk-desc">Kumpulkan jurnal lima tahun terakhir.</p>
+          <div class="tk-meta">
+            <span class="tk-badge tk-badge-done"><svg class="ic"><use href="#i-check"/></svg>Selesai</span>
+            <span class="tk-date">2 Nov 2026</span>
+          </div>
+          <div class="tk-sub"><span>Sub-task 5/5</span><b>100%</b></div>
+          <div class="tk-progress"><i style="--p:100%"></i></div>
+          <div class="gd-owner"><span class="gd-owner-avatar">NM</span>Dibuat oleh Naura</div>
+          <div class="tk-seg">
+            <button type="button">Belum</button>
+            <button type="button">Proses</button>
+            <button type="button" class="active">Selesai</button>
+          </div>
+          <div class="tk-actions">
+            <a href="edit-task.html" class="tk-act tk-act-edit"><svg class="ic"><use href="#i-edit"/></svg>Edit</a>
+            <button type="button" class="tk-act tk-act-del" data-open-delete><svg class="ic"><use href="#i-trash"/></svg>Hapus</button>
+          </div>
+        </article>
+ 
+      </section>
+ 
+    </main>
+  </div>
+ 
+  <!-- ===== MODAL HAPUS TUGAS ===== -->
+  <div class="modal" id="delete-modal" aria-hidden="true">
+    <div class="modal-box modal-sm" role="alertdialog" aria-modal="true" aria-labelledby="delete-title" aria-describedby="delete-desc">
+ 
+      <button type="button" class="modal-close" data-close-delete aria-label="Tutup">&times;</button>
+ 
+      <h3 id="delete-title">Hapus tugas ini?</h3>
+      <p class="modal-sub" id="delete-desc">Tindakan ini tidak bisa dibatalkan</p>
+ 
+      <div class="modal-actions">
+        <button type="button" class="btn-cancel" data-close-delete>Batal</button>
+        <!-- Di Laravel nanti: bungkus tombol ini dengan <form method="post"> + @method('DELETE') -->
+        <button type="button" class="btn-send" id="delete-confirm">Hapus</button>
+      </div>
+    </div>
+  </div>
+ 
+  <script>
+    // ===== MODAL HAPUS: buka dan tutup =====
+    var delModal = document.getElementById('delete-modal');
+ 
+    function openDelete() {
+      delModal.classList.add('open');
+      document.body.classList.add('modal-open');
+    }
+    function closeDelete() {
+      delModal.classList.remove('open');
+      document.body.classList.remove('modal-open');
+    }
+ 
+    // buka: semua tombol yang punya atribut data-open-delete
+    document.querySelectorAll('[data-open-delete]').forEach(function (btn) {
+      btn.addEventListener('click', openDelete);
+    });
+ 
+    // tutup: tombol X, tombol Batal, klik area gelap, tombol Esc
+    document.querySelectorAll('[data-close-delete]').forEach(function (btn) {
+      btn.addEventListener('click', closeDelete);
+    });
+    delModal.addEventListener('click', function (e) {
+      if (e.target === delModal) closeDelete();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeDelete();
+    });
+ 
+    // tombol "Hapus" di popup: sementara cuma menutup (nanti diganti hapus beneran di Laravel)
+    document.getElementById('delete-confirm').addEventListener('click', closeDelete);
+  </script>
+ 
+  <!-- ===== MODAL UNDANG ANGGOTA ===== -->
+  <div class="modal" id="invite-modal" aria-hidden="true">
+    <div class="modal-box modal-invite" role="dialog" aria-modal="true" aria-labelledby="invite-title">
+ 
+      <button type="button" class="modal-close" data-close-invite aria-label="Tutup">&times;</button>
+ 
+      <h3 id="invite-title">Undang anggota</h3>
+      <p class="modal-sub">Kirim undangan ke email temanmu.</p>
+ 
+      <label class="inv-label" for="invite-email">Email</label>
+      <input type="email" id="invite-email" name="email" class="inv-input" autocomplete="off">
+ 
+      <!-- Undangan yang belum dijawab. Di Laravel nanti, ulang <li> ini pakai @foreach -->
+      <h4 class="inv-title">Menunggu</h4>
+      <ul class="inv-list">
+        <li>
+          <span>dimas@gmail.com</span>
+          <button type="button" class="inv-cancel">Batalkan</button>
+        </li>
+      </ul>
+ 
+      <div class="modal-actions">
+        <button type="button" class="btn-cancel">Lihat email</button>
+        <!-- Di Laravel nanti: bungkus modal ini dengan <form method="post"> dan jadikan tombol ini type="submit" -->
+        <button type="button" class="btn-send" id="invite-send">Kirim undangan</button>
+      </div>
+    </div>
+  </div>
+ 
+  <script>
+    // ===== MODAL UNDANG ANGGOTA: buka dan tutup =====
+    var invModal = document.getElementById('invite-modal');
+ 
+    function openInvite() {
+      invModal.classList.add('open');
+      document.body.classList.add('modal-open');
+      setTimeout(function () { document.getElementById('invite-email').focus(); }, 50);
+    }
+    function closeInvite() {
+      invModal.classList.remove('open');
+      document.body.classList.remove('modal-open');
+    }
+ 
+    // buka: tombol yang punya atribut data-open-invite
+    document.querySelectorAll('[data-open-invite]').forEach(function (btn) {
+      btn.addEventListener('click', openInvite);
+    });
+ 
+    // tutup: tombol X, klik area gelap, tombol Esc
+    document.querySelectorAll('[data-close-invite]').forEach(function (btn) {
+      btn.addEventListener('click', closeInvite);
+    });
+    invModal.addEventListener('click', function (e) {
+      if (e.target === invModal) closeInvite();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeInvite();
+    });
+ 
+    // tombol "Kirim undangan": sementara cuma menutup (nanti diganti kirim beneran di Laravel)
+    document.getElementById('invite-send').addEventListener('click', closeInvite);
+  </script>
+ 
+</body>
+</html>
+ 

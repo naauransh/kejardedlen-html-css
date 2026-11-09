@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Masuk - KejarDedlen</title>
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+ 
+  <!-- Logo -->
+  <a href="landing-page.html" class="brand">
+    <span class="brand-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b4f86"
+           stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="5 13 10 18 19 7"/>
+      </svg>
+      <i class="brand-dot"></i>
+    </span>
+    <span class="brand-name">KejarDedlen</span>
+  </a>
+ 
+  <main class="auth-card auth-card-login">
+ 
+    <!-- Panel kiri -->
+    <section class="auth-side">
+      <div>
+        <p class="side-eyebrow">Kejar deadline-mu</p>
+        <h2 class="side-title">Selamat datang kembali di lintasan.</h2>
+        <p class="side-text">Satu tempat untuk tugas pribadi dan kerja kelompokmu.</p>
+      </div>
+ 
+      <div class="steps" aria-hidden="true">
+        <span class="step"></span>
+        <span class="line"></span>
+        <span class="step"></span>
+        <span class="line"></span>
+        <span class="step"></span>
+      </div>
+    </section>
+ 
+    <!-- Panel kanan (form) -->
+    <section class="auth-form">
+      <a href="landing-page.html" class="back-link">&larr; Kembali ke beranda</a>
+ 
+      <h1>Masuk</h1>
+      <p class="subtitle">Lanjutkan progres yang sudah kamu mulai.</p>
+ 
+      <form action="#" method="post">
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+ 
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" required>
+        </div>
+ 
+        <a href="forgot-password.html" class="forgot">Lupa password?</a>
+ 
+        <button type="submit" class="btn-submit">Masuk</button>
+      </form>
+ 
+      <p class="switch">Belum punya akun? <a href="register.html">Daftar</a></p>
+    </section>
+ 
+  </main>
+ 
+  <script>
+    // Tombol "Pakai akun ini" -> isi email & password otomatis
+    document.getElementById('use-demo').addEventListener('click', function () {
+      document.getElementById('email').value = 'naura@gmail.com';
+      document.getElementById('password').value = 'Naura123!';
+    });
+  </script>
+ 
+</body>
+</html>

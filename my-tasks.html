@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tugas Saya - KejarDedlen</title>
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dash-page">
+ 
+  <!-- Kumpulan icon (dipanggil pakai <use>) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+    <symbol id="i-task" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 3-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 010 6.8M18 14.4c2.2.7 3.5 2.6 3.5 5.6"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M14 4h5a1 1 0 011 1v14a1 1 0 01-1 1h-5"/><path d="M4 12h11M11 8l4 4-4 4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 13l4 4 10-10"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4z"/><path d="M13.5 6.5l4 4"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></symbol>
+  </svg>
+ 
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="dash-sidebar">
+    <a href="landing-page.html" class="brand">
+      <span class="brand-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b4f86"
+             stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="5 13 10 18 19 7"/>
+        </svg>
+        <i class="brand-dot"></i>
+      </span>
+      <span class="brand-name">KejarDedlen</span>
+    </a>
+ 
+    <nav class="dash-nav">
+      <a href="main-dashboard.html"><svg class="ic"><use href="#i-home"/></svg><span class="nav-text">Dashboard</span></a>
+      <a href="my-tasks.html" class="active"><svg class="ic"><use href="#i-task"/></svg><span class="nav-text">Tugas Saya</span></a>
+      <a href="team.html"><svg class="ic"><use href="#i-users"/></svg><span class="nav-text">Kelompok</span></a>
+      <a href="profil.html"><svg class="ic"><use href="#i-user"/></svg><span class="nav-text">Profil</span></a>
+    </nav>
+ 
+    <div class="dash-logout">
+      <a href="landing-page.html"><svg class="ic"><use href="#i-logout"/></svg><span class="nav-text">Keluar</span></a>
+    </div>
+  </aside>
+ 
+  <!-- ===== KONTEN UTAMA ===== -->
+  <div class="dash-main">
+ 
+    <header class="dash-topbar">
+      <h1>Tugas Saya</h1>
+      <a href="profil.html" class="user-pill">
+        <span class="user-avatar">NM</span>
+        Naura Mantep
+      </a>
+    </header>
+ 
+    <main class="dash-content">
+ 
+      <!-- Banner deadline -->
+      <div class="dash-alert tk-alert">
+        <svg class="ic"><use href="#i-clock"/></svg>
+        1 tugas mendekati deadline
+        <a href="#" class="tk-alert-btn">Lihat</a>
+      </div>
+ 
+      <!-- Filter cepat -->
+      <div class="tk-filter">
+        <a href="#" class="tk-chip">
+          <svg class="ic"><use href="#i-clock"/></svg>
+          Mendekati (1)
+        </a>
+        <span class="tk-filter-note">Lihat loading</span>
+      </div>
+ 
+      <!-- Pencarian + filter + tombol tambah -->
+      <div class="tk-toolbar">
+        <label class="tk-search">
+          <svg class="ic"><use href="#i-search"/></svg>
+          <input type="text" placeholder="Cari judul tugas..." aria-label="Cari judul tugas">
+        </label>
+ 
+        <select class="tk-select" aria-label="Filter status">
+          <option>Semua</option>
+          <option>Belum</option>
+          <option>Proses</option>
+          <option>Selesai</option>
+        </select>
+ 
+        <select class="tk-select" aria-label="Filter prioritas">
+          <option>Semua</option>
+          <option>Tinggi</option>
+          <option>Sedang</option>
+          <option>Rendah</option>
+        </select>
+ 
+        <a href="add-task.html" class="tk-add">
+          <svg class="ic"><use href="#i-plus"/></svg>
+          Tambah Tugas
+        </a>
+      </div>
+ 
+      <!-- Daftar tugas -->
+      <section class="tk-grid">
+ 
+        <!-- Kartu 1: mendesak, status Belum -->
+        <article class="tk-card tk-urgent">
+          <div class="tk-head">
+            <span class="tk-prio tk-prio-high">Tinggi</span>
+          </div>
+          <h3 class="tk-title"><a href="task-detail.html" class="tk-link">Revisi proposal skripsi</a></h3>
+          <p class="tk-desc">Perbaiki latar belakang dan rumusan masalah.</p>
+          <div class="tk-meta">
+            <span class="tk-badge tk-badge-warn"><svg class="ic"><use href="#i-clock"/></svg>2 hari lagi</span>
+            <span class="tk-date">5 Nov 2026</span>
+          </div>
+          <div class="tk-sub">
+            <span>Sub-task 1/5</span><b>20%</b>
+          </div>
+          <div class="tk-progress"><i style="--p:20%"></i></div>
+          <div class="tk-seg">
+            <button type="button" class="active">Belum</button>
+            <button type="button">Proses</button>
+            <button type="button">Selesai</button>
+          </div>
+          <div class="tk-actions">
+            <a href="edit-task.html" class="tk-act tk-act-edit"><svg class="ic"><use href="#i-edit"/></svg>Edit</a>
+            <button type="button" class="tk-act tk-act-del" data-open-delete><svg class="ic"><use href="#i-trash"/></svg>Hapus</button>
+          </div>
+        </article>
+ 
+        <!-- Kartu 2: selesai -->
+        <article class="tk-card tk-done">
+          <div class="tk-head">
+            <span class="tk-prio tk-prio-mid">Sedang</span>
+          </div>
+          <h3 class="tk-title"><a href="task-detail.html" class="tk-link">Bayar kos</a></h3>
+          <p class="tk-desc">Transfer pembayaran bulan ini.</p>
+          <div class="tk-meta">
+            <span class="tk-badge tk-badge-done"><svg class="ic"><use href="#i-check"/></svg>Selesai</span>
+            <span class="tk-date">31 Okt 2026</span>
+          </div>
+          <div class="tk-sub">
+            <span>Sub-task 2/2</span><b>100%</b>
+          </div>
+          <div class="tk-progress"><i style="--p:100%"></i></div>
+          <div class="tk-seg">
+            <button type="button">Belum</button>
+            <button type="button">Proses</button>
+            <button type="button" class="active">Selesai</button>
+          </div>
+          <div class="tk-actions">
+            <a href="edit-task.html" class="tk-act tk-act-edit"><svg class="ic"><use href="#i-edit"/></svg>Edit</a>
+            <button type="button" class="tk-act tk-act-del" data-open-delete><svg class="ic"><use href="#i-trash"/></svg>Hapus</button>
+          </div>
+        </article>
+ 
+        <!-- Kartu 3: proses -->
+        <article class="tk-card">
+          <div class="tk-head">
+            <span class="tk-prio tk-prio-mid">Sedang</span>
+          </div>
+          <h3 class="tk-title"><a href="task-detail.html" class="tk-link">Belajar Eloquent</a></h3>
+          <p class="tk-desc">Pelajari relasi model dan query builder.</p>
+          <div class="tk-meta">
+            <span class="tk-badge"><svg class="ic"><use href="#i-clock"/></svg>13 hari lagi</span>
+            <span class="tk-date">16 Nov 2026</span>
+          </div>
+          <div class="tk-sub">
+            <span>Sub-task 4/6</span><b>67%</b>
+          </div>
+          <div class="tk-progress"><i style="--p:67%"></i></div>
+          <div class="tk-seg">
+            <button type="button">Belum</button>
+            <button type="button" class="active">Proses</button>
+            <button type="button">Selesai</button>
+          </div>
+          <div class="tk-actions">
+            <a href="edit-task.html" class="tk-act tk-act-edit"><svg class="ic"><use href="#i-edit"/></svg>Edit</a>
+            <button type="button" class="tk-act tk-act-del" data-open-delete><svg class="ic"><use href="#i-trash"/></svg>Hapus</button>
+          </div>
+        </article>
+ 
+        <!-- Kartu 4: selesai -->
+        <article class="tk-card tk-done">
+          <div class="tk-head">
+            <span class="tk-prio tk-prio-low">Rendah</span>
+          </div>
+          <h3 class="tk-title"><a href="task-detail.html" class="tk-link">Olahraga pagi</a></h3>
+          <p class="tk-desc">Lari pagi tiga putaran.</p>
+          <div class="tk-meta">
+            <span class="tk-badge tk-badge-done"><svg class="ic"><use href="#i-check"/></svg>Selesai</span>
+            <span class="tk-date">3 Nov 2026</span>
+          </div>
+          <div class="tk-sub">
+            <span>Sub-task 3/3</span><b>100%</b>
+          </div>
+          <div class="tk-progress"><i style="--p:100%"></i></div>
+          <div class="tk-seg">
+            <button type="button">Belum</button>
+            <button type="button">Proses</button>
+            <button type="button" class="active">Selesai</button>
+          </div>
+          <div class="tk-actions">
+            <a href="edit-task.html" class="tk-act tk-act-edit"><svg class="ic"><use href="#i-edit"/></svg>Edit</a>
+            <button type="button" class="tk-act tk-act-del" data-open-delete><svg class="ic"><use href="#i-trash"/></svg>Hapus</button>
+          </div>
+        </article>
+ 
+        <!-- Kartu 5: belum -->
+        <article class="tk-card">
+          <div class="tk-head">
+            <span class="tk-prio tk-prio-low">Rendah</span>
+          </div>
+          <h3 class="tk-title"><a href="task-detail.html" class="tk-link">Beli kado ulang tahun</a></h3>
+          <p class="tk-desc">Cari kado untuk sahabat akhir pekan ini.</p>
+          <div class="tk-meta">
+            <span class="tk-badge"><svg class="ic"><use href="#i-clock"/></svg>21 hari lagi</span>
+            <span class="tk-date">24 Nov 2026</span>
+          </div>
+          <div class="tk-sub">
+            <span>Sub-task 0/2</span><b>0%</b>
+          </div>
+          <div class="tk-progress"><i style="--p:0%"></i></div>
+          <div class="tk-seg">
+            <button type="button" class="active">Belum</button>
+            <button type="button">Proses</button>
+            <button type="button">Selesai</button>
+          </div>
+          <div class="tk-actions">
+            <a href="edit-task.html" class="tk-act tk-act-edit"><svg class="ic"><use href="#i-edit"/></svg>Edit</a>
+            <button type="button" class="tk-act tk-act-del" data-open-delete><svg class="ic"><use href="#i-trash"/></svg>Hapus</button>
+          </div>
+        </article>
+ 
+      </section>
+ 
+    </main>
+  </div>
+ 
+  <!-- ===== MODAL HAPUS TUGAS ===== -->
+  <div class="modal" id="delete-modal" aria-hidden="true">
+    <div class="modal-box modal-sm" role="alertdialog" aria-modal="true" aria-labelledby="delete-title" aria-describedby="delete-desc">
+ 
+      <button type="button" class="modal-close" data-close-delete aria-label="Tutup">&times;</button>
+ 
+      <h3 id="delete-title">Hapus tugas ini?</h3>
+      <p class="modal-sub" id="delete-desc">Tindakan ini tidak bisa dibatalkan</p>
+ 
+      <div class="modal-actions">
+        <button type="button" class="btn-cancel" data-close-delete>Batal</button>
+        <!-- Di Laravel nanti: bungkus tombol ini dengan <form method="post"> + @method('DELETE') -->
+        <button type="button" class="btn-send" id="delete-confirm">Hapus</button>
+      </div>
+    </div>
+  </div>
+ 
+  <script>
+    // ===== MODAL HAPUS: buka dan tutup =====
+    var delModal = document.getElementById('delete-modal');
+ 
+    function openDelete() {
+      delModal.classList.add('open');
+      document.body.classList.add('modal-open');
+    }
+    function closeDelete() {
+      delModal.classList.remove('open');
+      document.body.classList.remove('modal-open');
+    }
+ 
+    // buka: semua tombol yang punya atribut data-open-delete
+    document.querySelectorAll('[data-open-delete]').forEach(function (btn) {
+      btn.addEventListener('click', openDelete);
+    });
+ 
+    // tutup: tombol X, tombol Batal, klik area gelap, tombol Esc
+    document.querySelectorAll('[data-close-delete]').forEach(function (btn) {
+      btn.addEventListener('click', closeDelete);
+    });
+    delModal.addEventListener('click', function (e) {
+      if (e.target === delModal) closeDelete();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeDelete();
+    });
+ 
+    // tombol "Hapus" di popup: sementara cuma menutup (nanti diganti hapus beneran di Laravel)
+    document.getElementById('delete-confirm').addEventListener('click', closeDelete);
+  </script>
+ 
+</body>
+</html>

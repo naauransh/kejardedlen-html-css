@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profil - KejarDedlen</title>
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dash-page">
+ 
+  <!-- Kumpulan icon (dipanggil pakai <use>) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+    <symbol id="i-task" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 3-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 010 6.8M18 14.4c2.2.7 3.5 2.6 3.5 5.6"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M14 4h5a1 1 0 011 1v14a1 1 0 01-1 1h-5"/><path d="M4 12h11M11 8l4 4-4 4"/></symbol>
+  </svg>
+ 
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="dash-sidebar">
+    <a href="landing-page.html" class="brand">
+      <span class="brand-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b4f86"
+             stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="5 13 10 18 19 7"/>
+        </svg>
+        <i class="brand-dot"></i>
+      </span>
+      <span class="brand-name">KejarDedlen</span>
+    </a>
+ 
+    <nav class="dash-nav">
+      <a href="main-dashboard.html"><svg class="ic"><use href="#i-home"/></svg><span class="nav-text">Dashboard</span></a>
+      <a href="my-tasks.html"><svg class="ic"><use href="#i-task"/></svg><span class="nav-text">Tugas Saya</span><span class="nav-badge">1</span></a>
+      <a href="team.html"><svg class="ic"><use href="#i-users"/></svg><span class="nav-text">Kelompok</span></a>
+      <a href="profil.html" class="active"><svg class="ic"><use href="#i-user"/></svg><span class="nav-text">Profil</span></a>
+    </nav>
+ 
+    <div class="dash-logout">
+      <a href="landing-page.html"><svg class="ic"><use href="#i-logout"/></svg><span class="nav-text">Keluar</span></a>
+    </div>
+  </aside>
+ 
+  <!-- ===== KONTEN UTAMA ===== -->
+  <div class="dash-main">
+ 
+    <header class="dash-topbar">
+      <h1>Profil</h1>
+      <a href="profil.html" class="user-pill">
+        <span class="user-avatar">NM</span>
+        Naura Mantep
+      </a>
+    </header>
+ 
+    <main class="dash-content">
+ 
+      <div class="pf-layout">
+ 
+        <!-- Ringkasan akun (kiri) -->
+        <aside class="pf-summary">
+          <span class="pf-avatar" aria-hidden="true">NM</span>
+          <h2 class="pf-name">Naura Mantep</h2>
+          <p class="pf-email">naura@gmail.com</p>
+ 
+          <div class="pf-stats">
+            <div><strong>5</strong><span>Total</span></div>
+            <div><strong>1</strong><span>Proses</span></div>
+            <div><strong>2</strong><span>Selesai</span></div>
+          </div>
+        </aside>
+ 
+        <!-- Form (kanan) -->
+        <form class="pf-card" action="#" method="post">
+ 
+          <h2 class="pf-title">Profil saya</h2>
+          <p class="pf-sub">Perbarui informasi akunmu.</p>
+ 
+          <div class="pf-grid">
+            <div class="pf-field">
+              <label for="nama">Nama</label>
+              <input type="text" id="nama" name="nama" value="Naura Mantep" autocomplete="name" required>
+            </div>
+ 
+            <div class="pf-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" value="naura@gmail.com" autocomplete="email" required>
+            </div>
+          </div>
+ 
+          <!-- Ganti password -->
+          <section class="pf-section">
+            <h3>Ganti password</h3>
+            <p class="pf-section-sub">Kosongkan kalau kamu tidak ingin mengganti password.</p>
+ 
+            <div class="pf-grid">
+              <div class="pf-field">
+                <label for="password-lama">Password lama</label>
+                <input type="password" id="password-lama" name="password_lama" autocomplete="current-password">
+              </div>
+ 
+              <div class="pf-field">
+                <label for="password-baru">Password baru</label>
+                <input type="password" id="password-baru" name="password_baru" autocomplete="new-password">
+                <p class="pf-help">Minimal 8 karakter.</p>
+              </div>
+            </div>
+          </section>
+ 
+          <div class="pf-actions">
+            <button type="submit" class="pf-save">Simpan perubahan</button>
+          </div>
+ 
+        </form>
+ 
+      </div>
+ 
+    </main>
+  </div>
+ 
+</body>
+</html>
+ 

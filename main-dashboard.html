@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - KejarDedlen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dash-page">
+
+  <!-- Kumpulan icon (dipanggil pakai <use>) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24">
+      <path d="M3 11l9-8 9 8" />
+      <path d="M5 10v10h14V10" />
+      <path d="M10 20v-6h4v6" />
+    </symbol>
+    <symbol id="i-task" viewBox="0 0 24 24">
+      <rect x="4" y="4" width="16" height="16" rx="3" />
+      <path d="M8.5 12l2.5 2.5 4.5-5" />
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" />
+    </symbol>
+    <symbol id="i-users" viewBox="0 0 24 24">
+      <circle cx="9" cy="8" r="3.5" />
+      <path d="M2.5 20c0-3.6 3-6 6.5-6s6.5 2.4 6.5 6" />
+      <path d="M16 4.6a3.5 3.5 0 010 6.8M18 14.4c2.2.7 3.5 2.6 3.5 5.6" />
+    </symbol>
+    <symbol id="i-user" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5" />
+    </symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24">
+      <path d="M14 4h5a1 1 0 011 1v14a1 1 0 01-1 1h-5" />
+      <path d="M4 12h11M11 8l4 4-4 4" />
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
+    </symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24">
+      <path d="M4 20h16" />
+      <path d="M7 20v-7M12 20V6M17 20v-10" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="M5 13l4 4 10-10" />
+    </symbol>
+  </svg>
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="dash-sidebar">
+    <a href="landing-page.html" class="brand">
+      <span class="brand-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b4f86" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="5 13 10 18 19 7" />
+        </svg>
+        <i class="brand-dot"></i>
+      </span>
+      <span class="brand-name">KejarDedlen</span>
+    </a>
+
+    <nav class="dash-nav">
+      <a href="main-dashboard.html" class="active"><svg class="ic">
+          <use href="#i-home" /></svg><span class="nav-text">Dashboard</span></a>
+      <a href="my-tasks.html"><svg class="ic">
+          <use href="#i-task" /></svg><span class="nav-text">Tugas Saya</span></a>
+      <a href="team.html"><svg class="ic">
+          <use href="#i-users" /></svg><span class="nav-text">Kelompok</span></a>
+      <a href="profil.html"><svg class="ic">
+          <use href="#i-user" /></svg><span class="nav-text">Profil</span></a>
+    </nav>
+
+    <div class="dash-logout">
+      <a href="landing-page.html"><svg class="ic">
+          <use href="#i-logout" /></svg><span class="nav-text">Keluar</span></a>
+    </div>
+  </aside>
+
+  <!-- ===== KONTEN UTAMA ===== -->
+  <div class="dash-main">
+
+    <header class="dash-topbar">
+      <h1>Dashboard</h1>
+      <a href="profil.html" class="user-pill">
+        <span class="user-avatar">NM</span>
+        Naura Mantep
+      </a>
+    </header>
+
+    <main class="dash-content">
+
+      <h2 class="greeting">Halo, Naura!</h2>
+      <p class="greeting-sub">Rabu, 4 November 2026 · Tetap fokus, garis akhir sudah dekat.</p>
+
+      <div class="dash-alert">
+        <svg class="ic">
+          <use href="#i-clock" /></svg>
+        1 tugas mendekati deadline
+      </div>
+
+      <!-- Kartu angka -->
+      <section class="stat-grid">
+        <div class="stat-box">
+          <span class="stat-icon"><svg class="ic">
+              <use href="#i-task" /></svg></span>
+          <div><strong>5</strong><small>Total tugas</small></div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-icon"><svg class="ic">
+              <use href="#i-clock" /></svg></span>
+          <div><strong>2</strong><small>Belum</small></div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-icon"><svg class="ic">
+              <use href="#i-chart" /></svg></span>
+          <div><strong>1</strong><small>Proses</small></div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-icon"><svg class="ic">
+              <use href="#i-check" /></svg></span>
+          <div><strong>2</strong><small>Selesai</small></div>
+        </div>
+      </section>
+
+      <!-- Dua grafik -->
+      <section class="chart-grid">
+
+        <!-- Status tugas (DONUT) -->
+        <article class="panel">
+          <div class="panel-head">
+            <h3>Status tugas</h3>
+            <a href="my-tasks.html">Semua tugas</a>
+          </div>
+
+          <div class="status-body">
+            <div class="donut">
+              <svg viewBox="0 0 160 160" aria-hidden="true">
+                <!-- pathLength=100 -> angka dasharray = persen. Mulai dari atas (diputar -90deg lewat CSS) -->
+                <circle class="ring ring-belum" cx="80" cy="80" r="60" pathLength="100" stroke-dasharray="40 60"
+                  stroke-dashoffset="0" />
+                <circle class="ring ring-proses" cx="80" cy="80" r="60" pathLength="100" stroke-dasharray="20 80"
+                  stroke-dashoffset="-40" />
+                <circle class="ring ring-selesai" cx="80" cy="80" r="60" pathLength="100" stroke-dasharray="40 60"
+                  stroke-dashoffset="-60" />
+              </svg>
+              <div class="donut-center">
+                <strong>5</strong>
+                <small>Total</small>
+              </div>
+            </div>
+
+            <ul class="legend">
+              <li><i class="dot dot-belum"></i><span>Belum dikerjakan</span><b>2</b></li>
+              <li><i class="dot dot-proses"></i><span>Proses</span><b>1</b></li>
+              <li><i class="dot dot-selesai"></i><span>Selesai</span><b>2</b></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Tugas selesai per hari (BAR) -->
+        <article class="panel">
+          <div class="panel-head">
+            <h3>Tugas selesai per hari</h3>
+            <span>7 hari terakhir</span>
+          </div>
+
+          <div class="bars">
+            <div class="bar-col" style="--v:2"><b>2</b><i class="chart-bar"></i><span>Sen</span></div>
+            <div class="bar-col" style="--v:4"><b>4</b><i class="chart-bar"></i><span>Sel</span></div>
+            <div class="bar-col" style="--v:3"><b>3</b><i class="chart-bar"></i><span>Rab</span></div>
+            <div class="bar-col" style="--v:5"><b>5</b><i class="chart-bar"></i><span>Kam</span></div>
+            <div class="bar-col" style="--v:2"><b>2</b><i class="chart-bar"></i><span>Jum</span></div>
+            <div class="bar-col" style="--v:1"><b>1</b><i class="chart-bar"></i><span>Sab</span></div>
+            <div class="bar-col" style="--v:2"><b>2</b><i class="chart-bar"></i><span>Min</span></div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Deadline terdekat -->
+      <section class="deadline-section">
+        <div class="section-head">
+          <h3>Deadline terdekat</h3>
+          <a href="my-tasks.html">Lihat semua &rarr;</a>
+        </div>
+
+        <div class="deadline-grid">
+          <article class="dl-card dl-urgent">
+            <span class="dl-badge"><svg class="ic">
+                <use href="#i-clock" /></svg>2 hari lagi</span>
+            <h4>Revisi proposal skripsi</h4>
+            <small>5 Nov 2026</small>
+          </article>
+          <article class="dl-card">
+            <span class="dl-badge"><svg class="ic">
+                <use href="#i-clock" /></svg>13 hari lagi</span>
+            <h4>Belajar Eloquent</h4>
+            <small>16 Nov 2026</small>
+          </article>
+          <article class="dl-card">
+            <span class="dl-badge"><svg class="ic">
+                <use href="#i-clock" /></svg>21 hari lagi</span>
+            <h4>Beli kado ulang tahun</h4>
+            <small>24 Nov 2026</small>
+          </article>
+        </div>
+      </section>
+
+      <!-- Banner rating -->
+      <section class="rate-banner">
+        <div>
+          <div class="rate-stars" aria-hidden="true">★★★★★</div>
+          <h3>Bagaimana KejarDedlen buatmu?</h3>
+          <p>Ceritakan pengalamanmu mengejar deadline.</p>
+        </div>
+        <button type="button" class="rate-btn" id="open-rating">Kirim rating</button>
+      </section>
+
+    </main>
+  </div>
+
+
+  <!-- ===== MODAL RATING ===== -->
+  <div class="modal" id="rating-modal" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="rating-title">
+
+      <button type="button" class="modal-close" id="rating-close" aria-label="Tutup">&times;</button>
+
+      <h3 id="rating-title">Beri rating dan ulasan</h3>
+      <p class="modal-sub">Seberapa membantu KejarDedlen untukmu?</p>
+
+      <div class="star-row" role="group" aria-label="Pilih rating">
+        <button type="button" class="star" data-value="1" aria-label="1 bintang"><svg viewBox="0 0 24 24">
+            <path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z" /></svg></button>
+        <button type="button" class="star" data-value="2" aria-label="2 bintang"><svg viewBox="0 0 24 24">
+            <path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z" /></svg></button>
+        <button type="button" class="star" data-value="3" aria-label="3 bintang"><svg viewBox="0 0 24 24">
+            <path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z" /></svg></button>
+        <button type="button" class="star" data-value="4" aria-label="4 bintang"><svg viewBox="0 0 24 24">
+            <path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z" /></svg></button>
+        <button type="button" class="star" data-value="5" aria-label="5 bintang"><svg viewBox="0 0 24 24">
+            <path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z" /></svg></button>
+      </div>
+
+      <label class="review-label" for="rating-text">Tulis ulasanmu (opsional)</label>
+      <div class="review-wrap">
+        <textarea id="rating-text" maxlength="200"
+          placeholder="Ceritakan pengalamanmu menggunakan KejarDedlen..."></textarea>
+        <span class="review-count" id="rating-count">0/200</span>
+      </div>
+      <p class="review-note">Ulasanmu akan tampil di halaman depan bersama namamu.</p>
+      <p class="rating-error" id="rating-error" role="alert"></p>
+
+      <div class="modal-actions">
+        <button type="button" class="btn-cancel" id="rating-cancel">Batal</button>
+        <button type="button" class="btn-send" id="rating-send">Kirim</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    // ===== MODAL RATING: buka, tutup, bintang, hitung karakter =====
+    var modal = document.getElementById('rating-modal');
+    var stars = document.querySelectorAll('#rating-modal .star');
+    var text = document.getElementById('rating-text');
+    var count = document.getElementById('rating-count');
+    var rating = 0;
+
+    function openModal() {
+      modal.classList.add('open');
+      document.body.classList.add('modal-open');
+    }
+
+    function closeModal() {
+      modal.classList.remove('open');
+      document.body.classList.remove('modal-open');
+    }
+
+    function paint(n) {
+      stars.forEach(function (s, i) {
+        s.classList.toggle('on', i < n);
+      });
+    }
+
+    // buka: tombol "Kirim rating" di banner
+    document.getElementById('open-rating').addEventListener('click', openModal);
+
+    // tutup: tombol X, tombol Batal, klik area gelap, tombol Esc
+    document.getElementById('rating-close').addEventListener('click', closeModal);
+    document.getElementById('rating-cancel').addEventListener('click', closeModal);
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // bintang: hover untuk lihat, klik untuk pilih
+    stars.forEach(function (star, i) {
+      star.addEventListener('mouseenter', function () {
+        paint(i + 1);
+      });
+      star.addEventListener('mouseleave', function () {
+        paint(rating);
+      });
+      star.addEventListener('click', function () {
+        rating = i + 1;
+        paint(rating);
+      });
+    });
+
+    // hitung karakter ulasan
+    text.addEventListener('input', function () {
+      count.textContent = text.value.length + '/200';
+    });
+
+    // tombol "Kirim": sementara cuma menutup popup (nanti diganti kirim ke Laravel)
+    document.getElementById('rating-send').addEventListener('click', closeModal);
+  </script>
+
+</body>
+
+</html>
